@@ -1,15 +1,27 @@
+import clsx from "clsx";
+import { useState } from "react";
+
 export function PriceFilter() {
+  const [open, setOpen] = useState(false);
   return (
-    <div>
-      <div className="px-4 py-4">
+    <div className=" xs:fixed xs:top-16 xs:z-50 xs:bg-base-300 xs:w-full ">
+      <button
+        onClick={(x) => setOpen(!open)}
+        className="md:hidden btn rounded-none bg-base-300  w-full "
+      >
+        Filter
+      </button>
+      <div
+        className={clsx("p-4", {
+          hidden: open,
+        })}
+      >
         <form className="">
           <div className=" grid gap-4">
             {/* 1 */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">
-                  Price €
-                </span>
+                <span className="label-text">Price €</span>
               </label>
               <select className="select select-bordered">
                 <option disabled selected>
@@ -25,9 +37,7 @@ export function PriceFilter() {
             {/* 2 */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
-                <span className="label-text">
-                  Price(points)
-                </span>
+                <span className="label-text">Price(points)</span>
               </label>
               <select className="select select-bordered">
                 <option disabled selected>
