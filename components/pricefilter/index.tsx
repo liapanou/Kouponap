@@ -2,12 +2,12 @@ import clsx from "clsx";
 import { useState } from "react";
 
 export function PriceFilter() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
-    <div className=" xs:fixed xs:top-16 xs:z-50 xs:bg-base-300 xs:w-full ">
+    <div className=" xs:fixed xs:top-16 xs:z-50 xs:bg-base-300 xs: w-full ">
       <button
         onClick={(x) => setOpen(!open)}
-        className="md:hidden btn rounded-none bg-base-300  w-full "
+        className=" btn rounded-none   w-full "
       >
         Filter
       </button>
@@ -18,6 +18,11 @@ export function PriceFilter() {
       >
         <form className="">
           <div className=" grid gap-4">
+            <input
+              type="text"
+              placeholder="🔍Type here"
+              className="input input-bordered w-full max-w-xs"
+            />
             {/* 1 */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
@@ -27,11 +32,11 @@ export function PriceFilter() {
                 <option disabled selected>
                   Pick one
                 </option>
-                <option>Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+                <option>50</option>
               </select>
             </div>
             {/* 2 */}
@@ -43,17 +48,17 @@ export function PriceFilter() {
                 <option disabled selected>
                   Pick one
                 </option>
-                <option>Star Wars</option>
-                <option>Harry Potter</option>
-                <option>Lord of the Rings</option>
-                <option>Planet of the Apes</option>
-                <option>Star Trek</option>
+                <option>100</option>
+                <option>200</option>
+                <option>500</option>
+                <option>800</option>
+                <option>1000</option>
               </select>
             </div>
           </div>
 
           <div className="divider" />
-          {/* 2 */}
+          {/* 3 */}
           <div>
             <span className="block text-sm font-semibold text-gray-500 mb-2">
               Food & Drinks
@@ -86,19 +91,19 @@ export function PriceFilter() {
               <div className="form-control border w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
-                  <span className="text-sm ml-2">Remember me</span>
+                  <span className="text-sm ml-2">Crepes</span>
                 </label>
               </div>
               <div className="form-control border w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
-                  <span className="text-sm ml-2">Remember me</span>
+                  <span className="text-sm ml-2">Pizza</span>
                 </label>
               </div>
               <div className="form-control border w-fit">
                 <label className="label cursor-pointer">
                   <input type="checkbox" className="checkbox checkbox-sm" />
-                  <span className="text-sm ml-2">Remember me</span>
+                  <span className="text-sm ml-2">Souvlakia</span>
                 </label>
               </div>
               <div className="form-control border w-fit">
