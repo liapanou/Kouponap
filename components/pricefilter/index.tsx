@@ -7,22 +7,26 @@ export function PriceFilter() {
     <div className=" xs:fixed xs:top-16 xs:z-50 xs:bg-base-300 xs: w-full ">
       <button
         onClick={(x) => setOpen(!open)}
-        className=" btn rounded-none   w-full "
+        className=" btn rounded-none  md:hidden  w-full "
       >
         Filter
       </button>
       <div
         className={clsx("p-4", {
-          hidden: open,
+          hidden: !open,
         })}
       >
         <form className="">
           <div className=" grid gap-4">
-            <input
-              type="text"
-              placeholder="🔍Type here"
-              className="input input-bordered w-full max-w-xs"
-            />
+            <div>
+              <label>Search</label>
+              <input
+                type="text"
+                placeholder="🔍Type here"
+                className="input input-bordered w-full max-w-xs"
+              />
+            </div>
+
             {/* 1 */}
             <div className="form-control w-full max-w-xs">
               <label className="label">
